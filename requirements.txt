@@ -3,5 +3,5 @@ pandas
 math
 requests
 plotly
-bs4
+beautifulsoup4
 nltk
