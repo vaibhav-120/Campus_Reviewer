@@ -188,7 +188,6 @@ def calculate_all(df):
     slight_negative = len(df[df['Sentiment'] == 'Slightly Negative'])
     return total_reviews,positive,negative,neutral,slight_positive,slight_negative
 
-@st.cache_data
 def overview(df,title):
     total_reviews,positive,negative,neutral,slight_positive,slight_negative = calculate_all(df)
     positive = ((positive+slight_positive)*100)//total_reviews
