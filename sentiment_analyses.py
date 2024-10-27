@@ -3,6 +3,10 @@ import requests
 from nltk.sentiment import SentimentIntensityAnalyzer
 sia = SentimentIntensityAnalyzer()
 
+try:
+    nltk.data.find('vader_lexicon.zip')
+except LookupError:
+    nltk.download('vader_lexicon')
 
 def get_sentiment(text):
     score = sia.polarity_scores(text)['compound']
