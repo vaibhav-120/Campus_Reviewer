@@ -5,7 +5,7 @@ sia = SentimentIntensityAnalyzer()
 
 try:
     nltk.data.find('vader_lexicon.zip')
-except LookupError:
+except:
     nltk.download('vader_lexicon')
 
 def get_sentiment(text):
