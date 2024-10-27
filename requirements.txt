@@ -1,0 +1,8 @@
+streamlit-lottie
+pandas
+math
+requests
+plotly.express
+plotly.graph_objects
+bs4
+nltk.sentiment
