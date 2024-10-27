@@ -2,8 +2,10 @@ import pandas as pd
 import requests
 
 try:
+    from nltk.sentiment import SentimentIntensityAnalyzer
     nltk.data.find('vader_lexicon.zip')
 except:
+    import nltk
     nltk.download('vader_lexicon')
 
 from nltk.sentiment import SentimentIntensityAnalyzer
