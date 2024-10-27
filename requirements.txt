@@ -2,7 +2,6 @@ streamlit-lottie
 pandas
 math
 requests
-plotly.express
-plotly.graph_objects
+plotly
 bs4
-nltk.sentiment
+nltk
