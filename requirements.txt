@@ -5,4 +5,3 @@ plotly==5.22.0
 plotly-express==0.4.1
 streamlit==1.36.0
 streamlit-lottie==0.0.5
-math
