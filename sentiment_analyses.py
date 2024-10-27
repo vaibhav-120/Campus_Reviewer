@@ -1,12 +1,13 @@
 import pandas as pd
 import requests
-from nltk.sentiment import SentimentIntensityAnalyzer
-sia = SentimentIntensityAnalyzer()
 
 try:
     nltk.data.find('vader_lexicon.zip')
 except:
     nltk.download('vader_lexicon')
+
+from nltk.sentiment import SentimentIntensityAnalyzer
+sia = SentimentIntensityAnalyzer()
 
 def get_sentiment(text):
     score = sia.polarity_scores(text)['compound']
