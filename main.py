@@ -10,6 +10,9 @@ st.set_page_config(page_title="Campus Reviewer", layout="wide")
 st.markdown(
     """
     <style>
+    header[data-testid="stHeader"] {
+        height:0
+    }
     body {
         background-color: #f8f9fa;
         color: #212529;
@@ -130,15 +133,11 @@ def load_url(url: str):
     return r.json()
 
 df = pd.read_csv('college_data.csv')
-col_1,col_2,col_3 = st.columns([1,4,1])
-with col_1:
-    file = load_url("https://lottie.host/e3509586-9dbe-4bb3-8e86-2a07aec389f0/6qpVH3vtX4.json")
-    st_lottie(file)
-with col_2:
-    st.markdown('<div class="big-title">Campus Reviewer</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-heading">Analyze feedback from various colleges</div>', unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns([1, 2, 1])
+st.markdown('<div class="big-title">Campus Reviewer</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-heading">Analyze feedback from various colleges</div>', unsafe_allow_html=True)
+
+col1,col2,col3 = st.columns([1,2,1])
 with col2:
     college_names = df['name'].values
     college_input = st.selectbox("", options=college_names, index=None, placeholder="Enter College Name")
@@ -176,8 +175,6 @@ def plot(data):
                 with textcol2:
                     st.markdown(f"""<div class="card"><p>{text[i]}</p></div>""",unsafe_allow_html=True)
 
-
-
 @st.cache_data
 def calculate_all(df):
     total_reviews = len(df)
@@ -190,8 +187,14 @@ def calculate_all(df):
 
 def overview(df,title):
     total_reviews,positive,negative,neutral,slight_positive,slight_negative = calculate_all(df)
-    positive = ((positive+slight_positive)*100)//total_reviews
-    negative = ((negative+slight_negative)* 100)//total_reviews
+    if (positive+slight_positive) == 0:
+        positive = 0
+    else:
+        positive = ((positive+slight_positive)*100)//total_reviews
+    if (negative+slight_negative) == 0:
+        negative = 0
+    else:
+        negative = ((negative+slight_negative)* 100)//total_reviews
     neutral = (neutral* 100)//total_reviews
     st.metric(title, f"{positive}% Positive", f"{neutral}% Neutral, {negative}% Negative")
 
@@ -282,10 +285,24 @@ if college_input:
     with col_detail:
         show_details(val)
 
-
+else:
+    st.container(height=10,border=False)
+    col_file1,x, col_file2,y, col_file3 = st.columns([2,1,2,1,2])
+    with col_file1:
+        file1 = load_url("https://lottie.host/1d726f97-65e4-4fd5-9522-177894a7a7d9/UoYEEb8rTY.json")
+        st_lottie(file1)
+        st.markdown('<div class="sub-heading">Search for your favourite Institutes</div>', unsafe_allow_html=True)
+    with col_file2:
+        st.container(height=50,border=False)
+        file2 = load_url("https://lottie.host/cc73783f-90d3-4c13-bb49-6f5a71018e51/twr3psvf4x.json")
+        st_lottie(file2)
+        st.container(height=45,border=False)
+        st.markdown('<div class="sub-heading">Anaylze what others say about the Institute</div>', unsafe_allow_html=True)
+    with col_file3:
+        file3 = load_url("https://lottie.host/9b3fdd1a-a026-4e72-9c6a-61e7d02f49ad/fdrAxdNkQS.json")
+        st_lottie(file3)
+        st.markdown('<div class="sub-heading">Select Best Institute for your career</div>', unsafe_allow_html=True)
     
-
-
 
 
 st.markdown('<div style="text-align: center; margin-top: 50px; font-size: 0.9rem; color: #6c757d;">Powered by Streamlit | © 2024 College Review Analyzer</div>', unsafe_allow_html=True)
