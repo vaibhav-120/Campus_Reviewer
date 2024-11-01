@@ -15,7 +15,6 @@ st.markdown(
     }
     body {
         background-color: #f8f9fa;
-        color: #212529;
     }
     .big-title {
         font-size: 3rem;
@@ -26,19 +25,16 @@ st.markdown(
     }
     .sub-heading {
         font-size: 1.5rem;
-        color: #343a40;
         text-align: center;
         margin-top: 0;
         margin-bottom: 20px;
     }
     .info {
         font-size: 1.2rem;
-        color: #343a40;
         margin-bottom: 20px;
     }
     .score {
         font-size: 2rem;
-        color: #343a40;
         margin-bottom: 20px;
     }
     .input-box {
