@@ -191,7 +191,8 @@ def overview(df,title):
         negative = 0
     else:
         negative = ((negative+slight_negative)* 100)//total_reviews
-    neutral = (neutral* 100)//total_reviews
+    if neutral!=0:
+        neutral = (neutral* 100)//total_reviews
     st.metric(title, f"{positive}% Positive", f"{neutral}% Neutral, {negative}% Negative")
 
 @st.cache_data
@@ -228,7 +229,7 @@ def pie(df1,df2,df3,df4,df5):
     st.plotly_chart(fig)
 
 @st.cache_data
-def overview_details(Infra_df,Academics_df,Placements_df, Campus_Life_df, Anything_Else_df):
+def overview_details(Infra_df,Academics_df,Placements_df, Campus_Life_df, Anything_Else_df,college_input):
     st.container(height=30,border=False)
     st.subheader(f"Overview of {college_input}")
     Infracol, Academiccol, Placementcol = st.columns(3)
@@ -244,7 +245,11 @@ def overview_details(Infra_df,Academics_df,Placements_df, Campus_Life_df, Anythi
     with statementcol:
         st.container(height=70,border=False)
         tr, pos, neg, neut = calculate_main(Infra_df,Academics_df,Placements_df, Campus_Life_df, Anything_Else_df)
-        overall_percentage = (pos*100)//tr
+        if pos!=0:
+            overall_percentage = (pos*100)//tr
+        else:
+            overall_percentage = 0
+
         st.markdown(f'<div class="info">Overall Score : <div class="score">{overall_percentage}%</div></div>', unsafe_allow_html=True)
         st.markdown(f'<div class="info">Overall Positive Reviews for {college_input} : {pos}</div>', unsafe_allow_html=True)
         st.markdown(f'<div class="info">Overall Negative Reviews for {college_input} : {neg}</div>', unsafe_allow_html=True)
@@ -256,7 +261,7 @@ if college_input:
     with st.spinner("Analysing Reviews..."):
         Infra_df, Academics_df, Placements_df, Campus_Life_df, Anything_Else_df = sentiment_analyses.sentiment(data)
 
-    overview_details(Infra_df,Academics_df,Placements_df, Campus_Life_df, Anything_Else_df)
+    overview_details(Infra_df,Academics_df,Placements_df, Campus_Life_df, Anything_Else_df,college_input)
     
     st.subheader(f'Detailed Review Analysis of {college_input}')
     option = st.radio('',('Infrastructure', 'Academics', 'Placements', 'Campus Life', 'Anything Else'),index=0,label_visibility="hidden")
