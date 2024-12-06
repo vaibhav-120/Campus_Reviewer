@@ -123,6 +123,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
 @st.cache_data
 def load_url(url: str):
     r = requests.get(url)
@@ -306,4 +307,4 @@ else:
     
 
 
-st.markdown('<div style="text-align: center; margin-top: 50px; font-size: 0.9rem; color: #6c757d;">Powered by Streamlit | © 2024 College Review Analyzer</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: center; margin-top: 50px; font-size: 0.9rem; color: #6c757d;">Powered by Streamlit | © 2024 College Reviewer</div>', unsafe_allow_html=True)
