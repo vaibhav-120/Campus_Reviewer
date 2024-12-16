@@ -85,8 +85,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown('<div class="big-title">College Recommender</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-heading">Suggesting college according to prefrences</div>', unsafe_allow_html=True)
+st.markdown('<div class="big-title">College Predictor</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-heading">Predicting college you will get according to your rank</div>', unsafe_allow_html=True)
 
 st.write("### Enter Your Rank")
 rank = st.number_input('d',1,200000,label_visibility='hidden')
