@@ -1,10 +1,29 @@
 import streamlit as st
-import pandas as pd, joblib, random
+import pandas as pd, joblib, random, os
 st.set_page_config(page_title="Campus Reviewer", layout="wide")
 
-scaler = joblib.load('pages/scaler.pkl')
-model = joblib.load('pages/kmeans_model.pkl')
-label_encoders = joblib.load('pages/label_encoders.pkl')
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_RELATIVE_PATH = "kmeans_model.pkl"
+SCALER_RELATIVE_PATH = "scaler.pkl"
+ENCODER_RELATIVE_PATH = "label_encoders.pkl"
+MODEL_PATH = os.path.join(BASE_DIR, MODEL_RELATIVE_PATH)
+SCALER_PATH = os.path.join(BASE_DIR, SCALER_RELATIVE_PATH)
+ENCODER_PATH = os.path.join(BASE_DIR, ENCODER_RELATIVE_PATH)
+
+def load_model(model_path):
+    try:
+        if os.path.exists(model_path):
+            model = joblib.load(model_path)
+            return model
+        else:
+            raise FileNotFoundError(f"Model file not found at: {model_path}")
+    except Exception as e:
+        raise
+
+model = load_model(MODEL_PATH)
+scaler = load_model(SCALER_PATH)
+label_encoders = load_model(ENCODER_PATH)
 data1 = pd.read_csv('pages/data1.csv')
 
 def recommend_colleges(stream,degree,location,fee_range):
