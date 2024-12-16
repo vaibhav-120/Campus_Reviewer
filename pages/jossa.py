@@ -1,8 +1,23 @@
 import streamlit as st
 import pandas as pd, joblib, numpy as np
+import os
 st.set_page_config(page_title="Campus Reviewer", layout="wide")
 
-model = joblib.load('pages/model.pkl')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_RELATIVE_PATH = "model.pkl"
+MODEL_PATH = os.path.join(BASE_DIR, MODEL_RELATIVE_PATH)
+
+def load_model(model_path):
+    try:
+        if os.path.exists(model_path):
+            model = joblib.load(model_path)
+            return model
+        else:
+            raise FileNotFoundError(f"Model file not found at: {model_path}")
+    except Exception as e:
+        raise
+
+model = load_model(MODEL_PATH)
 details = pd.read_csv('pages/detail.csv')
 
 def encoded_value(df,val):
