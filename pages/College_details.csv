@@ -1800,8 +1800,6 @@ Welcomgroup Graduate School of Hotel Administration ,Karnataka,Arts,UG,300000
 Manipal Academy of Higher Education ,Karnataka,Arts,UG,300000
 St Joseph's College ,Karnataka,Arts,UG,28800
 "St. Aloysius College, Mangalore ",Karnataka,Arts,UG,14750
-Bangalore Medical College and Research Institute ,Karnataka,Arts,UG,34720
-KS Hegde Medical Academy ,Karnataka,Arts,UG,82000
 Manipal Institute of Technology ,Karnataka,Arts,UG,75000
 Manipal School of Architecture and Planning ,Karnataka,Arts,UG,120000
 St George College of Management Science and ,Karnataka,Arts,UG,50900
@@ -1965,7 +1963,6 @@ DAV College ,Punjab,Arts,UG,37430
 "Post Graduate Government College, Chandigarh ",Punjab,Arts,UG,16670
 Panjab University ,Punjab,Arts,UG,8100
 Punjab Agricultural University ,Punjab,Arts,UG,79920
-Thapar Institute of Engineering and Technology ,Punjab,Arts,UG,113200
 Indian Institute of Technology ,Punjab,Arts,UG,16300
 "Government Home Science College, Chandigarh ",Punjab,Arts,UG,27731
 Chandigarh University ,Punjab,Arts,UG,50000
@@ -1975,7 +1972,6 @@ I.K. Gujral Punjab Technical University ,Punjab,Arts,UG,38600
 "Khalsa College, Amritsar ",Punjab,Arts,UG,45670
 "BBK DAV College for Women, Amritsar ",Punjab,Arts,UG,22200
 "Doaba College, Jalandhar ",Punjab,Arts,UG,42000
-Sant Longowal Institute of Engineering and Technology ,Punjab,Arts,UG,27900
 Goswami Ganesh Dutt Sanatan Dharama College ,Punjab,Arts,UG,23500
 "DAV College, Jalandhar ",Punjab,Arts,UG,22410
 "Chitkara University, Chitkara School of Mass Communication ",Punjab,Arts,UG,134000
@@ -2006,7 +2002,6 @@ Acharya Prafulla Chandra College ,West bengal,Arts,UG,2249
 "Sarsuna College, Kolkata ",West bengal,Arts,UG,2100
 Acharya Girish Chandra Bose College ,West bengal,Arts,UG,600
 Indian Institute of Technology ,West bengal,Arts,UG,50000
-Indian Institute of Engineering Science and Technology ,West bengal,Arts,UG,28000
 "University of Calcutta, Kolkata ",West bengal,Arts,UG,2314
 National Institute of Technology ,West bengal,Arts,UG,64100
 Guru Nanak Institute of Hotel Management ,West bengal,Arts,UG,190000
@@ -2049,7 +2044,6 @@ Shri Guru Ram Rai University ,Uttarakhand,Arts,UG,24000
 "ICFAI University, Dehradun ",Uttarakhand,Arts,UG,256800
 Himgiri Zee University ,Uttarakhand,Arts,UG,140000
 Dev Bhoomi Group of Institutions ,Uttarakhand,Arts,UG,47500
-Roorkee College of Engineering ,Uttarakhand,Arts,UG,54600
 Institute of Technology and Management ,Uttarakhand,Arts,UG,35100
 BFIT Group of Institutions ,Uttarakhand,Arts,UG,28000
 Sardar Bhagwan Singh University ,Uttarakhand,Arts,UG,36000
@@ -2274,7 +2268,6 @@ Suresh Gyan Vihar University ,Rajasthan,Hotel-management,UG,90000
 Jagdishprasad Jhabarmal Tibrewala University ,Rajasthan,Hotel-management,UG,60000
 "Shyam University, Dausa ",Rajasthan,Hotel-management,UG,80000
 "Shridhar University, Pilani ",Rajasthan,Hotel-management,UG,99300
-University of Engineering and Management ,Rajasthan,Hotel-management,UG,79000
 Sangam University ,Rajasthan,Hotel-management,UG,95500
 "Bhagwant University, Ajmer ",Rajasthan,Hotel-management,UG,75000
 University of Technology ,Rajasthan,Hotel-management,UG,40000
@@ -2339,7 +2332,6 @@ Chandigarh Group of Colleges ,Punjab,Hotel-management,UG,115100
 Global Institute of Management ,Punjab,Hotel-management,UG,50850
 "Global Institute, Amritsar ",Punjab,Hotel-management,UG,135000
 CT University ,Punjab,Hotel-management,UG,114700
-DAV Institute of Engineering and Technology ,Punjab,Hotel-management,UG,50850
 "PCTE Group of Institutes, Ludhiana ",Punjab,Hotel-management,UG,107400
 Amritsar Group of Colleges ,Punjab,Hotel-management,UG,316089
 "CT Group of Institutions, Jalandhar ",Punjab,Hotel-management,UG,106900
@@ -2355,16 +2347,12 @@ Eastern Institute for Integrated Learning In Management ,West bengal,Hotel-manag
 Maulana Abul Kalam Azad University of Technology ,West bengal,Hotel-management,UG,70000
 "Amity University, Kolkata ",West bengal,Hotel-management,UG,105000
 "NIPS School of Hotel Management, Kolkata ",West bengal,Hotel-management,UG,590000
-Future Institute of Engineering and Management ,West bengal,Hotel-management,UG,130500
 Sister Nivedita University ,West bengal,Hotel-management,UG,113000
 Globsyn Business School ,West bengal,Hotel-management,UG,14000
 Seacom Skills University ,West bengal,Hotel-management,UG,70000
-University of Engineering and Management ,West bengal,Hotel-management,UG,110000
-JIS College of Engineering ,West bengal,Hotel-management,UG,98150
 National Institute of Management ,West bengal,Hotel-management,UG,140000
 "Inspiria Knowledge Campus, Siliguri ",West bengal,Hotel-management,UG,158000
 International School of Hospitality Management ,West bengal,Hotel-management,UG,386000
-"Seacom Engineering College, Howrah ",West bengal,Hotel-management,UG,160000
 Saroj Mohan Institute of Technology ,West bengal,Hotel-management,UG,170000
 "JIS University, Kolkata ",West bengal,Hotel-management,UG,190000
 International Institute of Management Sciences ,West bengal,Hotel-management,UG,325000
@@ -3836,7 +3824,6 @@ Bimal Chandra College of Law ,West bengal,Law,UG,37500
 Jyotirmoy School of Law ,West bengal,Law,UG,65000
 Sister Nivedita University ,West bengal,Law,UG,102400
 Seacom Skills University ,West bengal,Law,UG,60000
-University of Engineering and Management ,West bengal,Law,UG,101500
 The Neotia University ,West bengal,Law,UG,120000
 "JIS University, Kolkata ",West bengal,Law,UG,119080
 IAS Academy ,West bengal,Law,UG,58000
@@ -4572,7 +4559,6 @@ Maharishi University of Management and Technology Bilaspur ,Chhattisgarh,Arts,UG
 AAFT University of Media and Arts ,Chhattisgarh,Arts,UG,280000
 "Rungta Group of Institutions Bhilai Campus, Bhilai ",Chhattisgarh,Arts,UG,17000
 "ISBM University, Raipur ",Chhattisgarh,Arts,UG,16900
-OP Jindal University School Of Engineering ,Chhattisgarh,Arts,UG,100000
 "MATS School of Business Studies, Raipur ",Chhattisgarh,Arts,UG,25000
 "D.L.S. P.G. College, Bilaspur ",Chhattisgarh,Arts,UG,6000
 "Ghanshyam Singh Arya Kanya Mahavidyalaya, Durg ",Chhattisgarh,Arts,UG,3300
@@ -4706,7 +4692,6 @@ Sri Sai University ,Himachal pradesh,Hotel-management,UG,60000
 "Arni University, Kangra ",Himachal pradesh,Hotel-management,UG,65000
 Bahra University ,Himachal pradesh,Hotel-management,UG,69650
 Maharaja Agrasen University ,Himachal pradesh,Hotel-management,UG,70000
-Himachal Institute of Engineering and Technology ,Himachal pradesh,Hotel-management,UG,67500
 "Chitkara University, Solan ",Himachal pradesh,Hotel-management,UG,110000
 "Bells Institute of Management & Technology, Shimla ",Himachal pradesh,Hotel-management,UG,60000
 Arni School of Hospitality and Tourism Management ,Himachal pradesh,Hotel-management,UG,62000
@@ -5019,7 +5004,6 @@ Bahra University ,Himachal pradesh,Law,UG,64600
 "AP Goyal Shimla University, Shimla ",Himachal pradesh,Law,UG,100000
 Maharaja Agrasen University ,Himachal pradesh,Law,UG,64000
 "ICFAI University, Baddi ",Himachal pradesh,Law,UG,55000
-Himachal Institute of Engineering and Technology ,Himachal pradesh,Law,UG,44000
 "Himalayan Group of Professional Institutions, Sirmaur ",Himachal pradesh,Law,UG,54000
 Manav Bharti University ,Himachal pradesh,Law,UG,45000
 "LR Institute of Legal Studies, Solan ",Himachal pradesh,Law,UG,60000
@@ -5177,7 +5161,6 @@ Rajiv Gandhi University ,Arunachal pradesh,Arts,UG,5000
 Arunachal University of Studies ,Arunachal pradesh,Arts,UG,28000
 "Institute of Distance Education, Rajiv Gandhi University, Itanagar ",Arunachal pradesh,Arts,UG,5400
 Venkateshwara Open University ,Arunachal pradesh,Arts,UG,20000
-"Indira Gandhi Technological And Medical Sciences University, Ziro ",Arunachal pradesh,Arts,UG,34000
 "Don Bosco College, Itanagar ",Arunachal pradesh,Arts,UG,37300
 Siang Royal Academy ,Arunachal pradesh,Arts,UG,25000
 "The Global University, Itanagar ",Arunachal pradesh,Arts,UG,14000
@@ -7003,7 +6986,6 @@ DAV College ,Punjab,Arts,PG,20250
 "Post Graduate Government College for Girls, Chandigarh ",Punjab,Arts,PG,22000
 "Post Graduate Government College, Chandigarh ",Punjab,Arts,PG,18400
 Panjab University ,Punjab,Arts,PG,8100
-Thapar Institute of Engineering and Technology ,Punjab,Arts,PG,116460
 Chandigarh University ,Punjab,Arts,PG,60000
 I.K. Gujral Punjab Technical University ,Punjab,Arts,PG,49000
 "Khalsa College, Amritsar ",Punjab,Arts,PG,45830
@@ -8863,7 +8845,6 @@ Rajiv Gandhi University ,Arunachal pradesh,Arts,PG,2620
 Arunachal University of Studies ,Arunachal pradesh,Arts,PG,38000
 "Institute of Distance Education, Rajiv Gandhi University, Itanagar ",Arunachal pradesh,Arts,PG,12100
 Venkateshwara Open University ,Arunachal pradesh,Arts,PG,12500
-"Indira Gandhi Technological And Medical Sciences University, Ziro ",Arunachal pradesh,Arts,PG,34000
 "Don Bosco College, Itanagar ",Arunachal pradesh,Arts,PG,40900
 "The Global University, Itanagar ",Arunachal pradesh,Arts,PG,15000
 Arunachal University of Studies ,Arunachal pradesh,Hotel-management,PG,43000

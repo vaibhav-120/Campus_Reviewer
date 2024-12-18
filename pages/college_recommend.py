@@ -24,26 +24,23 @@ def load_model(model_path):
 model = load_model(MODEL_PATH)
 scaler = load_model(SCALER_PATH)
 label_encoders = load_model(ENCODER_PATH)
-data1 = pd.read_csv('pages/data1.csv')
-
-def recommend_colleges(stream,degree,location,fee_range):
-    fee = fee_range[1]
-    fee = scaler.transform([[fee]])[0][0]
-    stream = label_encoders['Stream'].transform([stream])[0]
-    degree = label_encoders['Degree'].transform([degree])[0]
-    location = label_encoders['State'].transform([location])[0]
-
-    user_features = [location,stream,degree,fee]
-    cluster = model.predict([user_features])[0]
-    recommendations = data1[data1['cluster'] == cluster]
-    collegees = []
-    colleges_in_state = data1[data1['State'] == location].College_Name.values.tolist()
-    for i in colleges_in_state:
-        if i in recommendations['College_Name'].values.tolist() and recommendations[recommendations['Fee'] < fee].College_Name.values.tolist():
-            collegees.append(i)
-    return collegees
-
+data1 = pd.read_csv('pages/data.csv')
 data = pd.read_csv('pages/College_details.csv')
+
+def recommend_colleges(user_input):
+    for col in ['State', 'Stream', 'Degree']:
+        user_input[col] = label_encoders[col].transform([user_input[col]])[0]
+
+    user_features = [user_input[col] for col in ['State', 'Stream', 'Degree']]
+    cluster = model.predict([user_features])[0]
+
+    recommendations = data1[data1['cluster'] == cluster]
+    return recommendations[['College_Name','State','Stream']]
+
+def find_closest_fee(lst,fee):
+    fee_diffs = abs(lst.Fee - fee)
+    min_diff_index = fee_diffs.idxmin()
+    return data.loc[min_diff_index]
 
 st.markdown(
     '''
@@ -133,9 +130,28 @@ fee_range = st.slider(
 )
 
 if st.button("Find Colleges"):
-    clgs = recommend_colleges(stream,degree,location,fee_range)
-    clg = clgs[random.randint(0,len(clgs))]
-    st.success(clg)
+    input = [location,stream,degree]
+    user_input = {
+        'State': input[0],
+        'Stream': input[1],
+        'Degree': input[2]
+    }
+    clgs = recommend_colleges(user_input)
+    fee = scaler.transform([[fee_range[1]]])[0][0]
+
+    recommended_college_names = clgs['College_Name'].tolist()
+    indices = []
+    for i in range(len(data)):
+        if data1.loc[i, 'College_Name'] in recommended_college_names:
+            indices.append(i)
+
+    s = pd.DataFrame(data1.iloc[indices].State == user_input['State'])
+    lst = data1.iloc[s[s['State'] == True].index.tolist()]
+    lst = lst[lst.Stream == user_input['Stream']]
+    lst = lst[lst.Degree == user_input['Degree']]
+    
+    closest_college = find_closest_fee(lst,fee)
+    st.success(closest_college.College_Name)
 
 
 st.markdown("---")
