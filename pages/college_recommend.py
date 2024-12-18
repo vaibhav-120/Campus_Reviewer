@@ -7,9 +7,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_RELATIVE_PATH = "kmeans_model.pkl"
 SCALER_RELATIVE_PATH = "scaler.pkl"
 ENCODER_RELATIVE_PATH = "label_encoders.pkl"
+DATA1_RELATIVE_PATH = "data.csv"
+DATA_RELATIVE_PATH = "College_details.csv"
 MODEL_PATH = os.path.join(BASE_DIR, MODEL_RELATIVE_PATH)
 SCALER_PATH = os.path.join(BASE_DIR, SCALER_RELATIVE_PATH)
 ENCODER_PATH = os.path.join(BASE_DIR, ENCODER_RELATIVE_PATH)
+DATA1_PATH = os.path.join(BASE_DIR, DATA1_RELATIVE_PATH)
+DATA_PATH = os.path.join(BASE_DIR, DATA_RELATIVE_PATH)
 
 def load_model(model_path):
     try:
@@ -21,11 +25,21 @@ def load_model(model_path):
     except Exception as e:
         raise
 
+def load_file(file_path):
+    try:
+        if os.path.exists(file_path):
+            file = pd.read_csv(file_path)
+            return file
+        else:
+            raise FileNotFoundError(f"File file not found at: {file_path}")
+    except Exception as e:
+        raise
+
 model = load_model(MODEL_PATH)
 scaler = load_model(SCALER_PATH)
 label_encoders = load_model(ENCODER_PATH)
-data1 = pd.read_csv('pages/data.csv')
-data = pd.read_csv('pages/College_details.csv')
+data1 = load_file(DATA1_PATH)
+data = load_file(DATA_PATH) 
 
 def recommend_colleges(user_input):
     for col in ['State', 'Stream', 'Degree']:
