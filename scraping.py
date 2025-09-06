@@ -3,14 +3,8 @@ from bs4 import BeautifulSoup
 
 def Scraping(id,page):
     url = f"https://www.careers360.com/colleges/reviews?page={page}&college_id={id}"
-    proxy={
-            "http": "http://pehgjxwr:j7u0qyb1xux8@198.23.239.134:6540",
-            "https": "http://pehgjxwr:j7u0qyb1xux8@198.23.239.134:6540",
-            "http": "http://pehgjxwr:j7u0qyb1xux8@207.244.217.165:6712",
-            "https": "http://pehgjxwr:j7u0qyb1xux8@207.244.217.165:6712"
-        }
 
-    response = requests.get(url,proxies=proxy)    
+    response = requests.get(url)    
     College_Infrastructure = []
     Academics = []
     Placements = []
@@ -56,8 +50,8 @@ def scrap(id):
             Placements += Placement
             Campus_Life += Campus_Lyf
             Anything_Else += Any_Else
-    except:
-        pass
+    except Exception as e:
+        print(e)
     data = {}
     data["College_Infrastructure"] = College_Infrastructure
     data["Academics"] = Academics
